@@ -1,0 +1,14 @@
+{
+  "name": "rtdctl",
+  "version": "1.0.0",
+  "description": "command line tool for rtd",
+  "scripts": {
+    "start": "./rtdctl",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan McAulay",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.55.0"
+  }
+}
