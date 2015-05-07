@@ -38,6 +38,10 @@ var Collection = function(name, dbUrl) {
   this.url = dbUrl + '/' + name;
 };
 
+Collection.prototype.findById = function(id, callback) {
+  request.get(this.url + '/' + id, resHandler(callback));
+};
+
 Collection.prototype.find = function(q, callback) {
   request.get({url: this.url, body: q, json: true}, resHandler(callback));
 };
