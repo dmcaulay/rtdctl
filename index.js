@@ -33,6 +33,10 @@ Collection.prototype.findById = function(id, callback) {
 };
 
 Collection.prototype.find = function(q, callback) {
+  if (!callback) {
+    callback = q;
+    q = {};
+  }
   request.get({url: this.url, body: q, json: true}, resHandler(callback));
 };
 
