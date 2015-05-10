@@ -9,5 +9,8 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.55.0"
+  },
+  "bin": {
+    "rtdctl": "bin/rtdctl.js"
   }
 }
