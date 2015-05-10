@@ -44,6 +44,10 @@ Collection.prototype.insert = function(doc, callback) {
   request.post({url: this.url, body: doc, json: true}, resHandler(callback));
 };
 
+Collection.prototype.update = function(id, doc, callback) {
+  request.put({url: this.url + "/" + id, body: doc, json: true}, resHandler(callback));
+};
+
 Collection.prototype.del = function(id, callback) {
   request.del(this.url + "/" + id, resHandler(callback));
 };
